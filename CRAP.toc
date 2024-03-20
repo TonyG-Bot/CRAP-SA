@@ -1,0 +1,18 @@
+## Interface: 11200
+## Title: CRAP
+## Author: luskanek
+## Notes: Compact raid and party frames.
+## Version: GIT
+## SavedVariablesPerCharacter: CRAP_Cache, CRAP_Config
+
+core.lua
+options.lua
+scripts.lua
+
+libs\libtipscan.lua
+libs\libspell.lua
+libs\libpredict.lua
+libs\librange.lua
+
+Templates.xml
+GroupFrame.xml
