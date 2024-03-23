@@ -67,7 +67,7 @@ function GroupMemberFrame_OnEvent()
       if event == 'UNIT_AURA' then
          CRAP:UpdateMemberAuras(this)
       elseif event == 'UNIT_DISPLAYPOWER' then
-         CRAP:UpdateMemberFrame(this)
+         CRAP:UpdateMember(this)
       elseif event == 'UNIT_HEALTH' then
          CRAP:UpdateMemberHealth(this)
       else
