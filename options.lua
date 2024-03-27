@@ -109,7 +109,12 @@ SlashCmdList['CRAP'] = function(msg)
          return
       end
 
-      DEFAULT_CHAT_FRAME:AddMessage('Click-binding enabled. Open the spellbook and click on spells you want to bind (modifiers are supported). Holding down alt will force the bound button to always use the highest rank of the selected spell. To unbind a button, click on the \'Attack\' spell.\n\nIf you re-bind left click, use alt-left click on a frame to select it.')
+      DEFAULT_CHAT_FRAME:AddMessage('\nExisting bindings:')
+      for button, spell in pairs(CRAP_Config['CLICKCAST_DATA']) do
+         DEFAULT_CHAT_FRAME:AddMessage(button .. ' - ' .. spell)
+      end
+
+      DEFAULT_CHAT_FRAME:AddMessage('\nClick-binding enabled. Open the spellbook and click on spells you want to bind (modifiers are supported). Holding down alt will force the bound button to always use the highest rank of the selected spell. To unbind a button, click on the \'Attack\' spell.\n\nIf you re-bind left click, use alt-left click on a frame to select it.')
    else
       for k in pairs(options) do
          if string.gsub(strupper(args[1]), '-', '_') == k then
