@@ -51,6 +51,9 @@ function CRAP:Update(mock)
 		end
 	end
 
+	local head = _G['GroupFrameMemberFrame1GroupHeader']
+	head:SetText('Group 1')
+
 	local cols = mock and (CRAP_Config['GROUP_LAYOUT'] and 8 or 4) or 0
 	local rows = mock and (CRAP_Config['GROUP_LAYOUT'] and 5 or 10) or 0
 
@@ -80,6 +83,8 @@ function CRAP:Update(mock)
 				end
 			end
 		elseif GetNumPartyMembers() > 0 then
+			head:SetText('Party')
+
 			local members = GetNumPartyMembers()
 			cols = 1
 			rows = members + 1

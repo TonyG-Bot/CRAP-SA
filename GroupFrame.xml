@@ -13,7 +13,7 @@
                 </Anchors>
                 <Layers>
                     <Layer level="OVERLAY">
-                        <FontString name="$parentGroupHeader" text="Group 1" inherits="GameFontNormalSmall">
+                        <FontString name="$parentGroupHeader" inherits="GameFontNormalSmall">
                             <Anchors>
                                 <Anchor point="TOP" relativeTo="$parent">
                                     <Offset x="0" y="20" />
