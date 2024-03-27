@@ -5,7 +5,7 @@
             <EdgeSize val="16" />
         </Backdrop>
         <Frames>
-            <Frame name="$parentMemberFrame1" inherits="GroupMemberFrameTemplate">
+            <Button name="$parentMemberFrame1" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parent">
                         <Offset x="5" y="-5" />
@@ -22,28 +22,28 @@
                         </FontString>
                     </Layer>
                 </Layers>
-            </Frame>
-            <Frame name="$parentMemberFrame2" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame2" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame1" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame3" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame3" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame2" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame4" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame4" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame3" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame5" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame5" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame4" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame6" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame6" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame1" relativePoint="TOPRIGHT" />
                 </Anchors>
@@ -58,28 +58,28 @@
                         </FontString>
                     </Layer>
                 </Layers>
-            </Frame>
-            <Frame name="$parentMemberFrame7" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame7" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame6" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame8" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame8" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame7" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame9" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame9" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame8" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame10" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame10" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame9" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame11" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame11" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame6" relativePoint="TOPRIGHT" />
                 </Anchors>
@@ -94,28 +94,28 @@
                         </FontString>
                     </Layer>
                 </Layers>
-            </Frame>
-            <Frame name="$parentMemberFrame12" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame12" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame11" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame13" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame13" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame12" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame14" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame14" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame13" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame15" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame15" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame14" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame16" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame16" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame11" relativePoint="TOPRIGHT" />
                 </Anchors>
@@ -130,28 +130,28 @@
                         </FontString>
                     </Layer>
                 </Layers>
-            </Frame>
-            <Frame name="$parentMemberFrame17" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame17" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame16" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame18" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame18" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame17" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame19" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame19" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame18" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame20" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame20" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame19" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame21" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame21" inherits="GroupMemberFrameTemplate">
                 <Layers>
                     <Layer level="OVERLAY">
                         <FontString name="$parentGroupHeader" text="Group 5" inherits="GameFontNormalSmall">
@@ -163,28 +163,28 @@
                         </FontString>
                     </Layer>
                 </Layers>
-            </Frame>
-            <Frame name="$parentMemberFrame22" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame22" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame21" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame23" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame23" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame22" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame24" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame24" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame23" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame25" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame25" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame24" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame26" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame26" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame21" relativePoint="TOPRIGHT" />
                 </Anchors>
@@ -199,28 +199,28 @@
                         </FontString>
                     </Layer>
                 </Layers>
-            </Frame>
-            <Frame name="$parentMemberFrame27" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame27" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame26" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame28" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame28" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame27" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame29" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame29" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame28" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame30" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame30" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame29" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame31" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame31" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame26" relativePoint="TOPRIGHT" />
                 </Anchors>
@@ -235,28 +235,28 @@
                         </FontString>
                     </Layer>
                 </Layers>
-            </Frame>
-            <Frame name="$parentMemberFrame32" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame32" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame31" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame33" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame33" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame32" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame34" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame34" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame33" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame35" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame35" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame34" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame36" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame36" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame31" relativePoint="TOPRIGHT" />
                 </Anchors>
@@ -271,27 +271,27 @@
                         </FontString>
                     </Layer>
                 </Layers>
-            </Frame>
-            <Frame name="$parentMemberFrame37" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame37" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame36" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame38" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame38" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame37" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame39" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame39" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame38" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
-            <Frame name="$parentMemberFrame40" inherits="GroupMemberFrameTemplate">
+            </Button>
+            <Button name="$parentMemberFrame40" inherits="GroupMemberFrameTemplate">
                 <Anchors>
                     <Anchor point="TOPLEFT" relativeTo="$parentMemberFrame39" relativePoint="BOTTOMLEFT" />
                 </Anchors>
-            </Frame>
+            </Button>
         </Frames>
         <Scripts>
             <OnEvent>

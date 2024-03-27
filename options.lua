@@ -1,23 +1,26 @@
+local _G = getfenv()
+
 local options = {
-   ['GROUP_POSITION'] = {
-      ['X'] = 24,
-      ['Y'] = -192,
-   },
    ['BORDER_COLOR'] = {
       ['R'] = 1.0,
       ['G'] = 1.0,
       ['B'] = 1.0,
       ['A'] = 1.0,
    },
+   ['CLASS_COLORS'] = true,
+   ['CLICKCAST_DATA'] = {},
+   ['GROUP_HEADERS'] = true,
+   ['GROUP_LAYOUT'] = false,
+   ['GROUP_POSITION'] = {
+      ['X'] = 24,
+      ['Y'] = -192,
+   },
+   ['MANA_ONLY'] = false,
    ['UNIT_SIZE'] = {
       ['W'] = 64,
       ['H'] = 42,
    },
-   ['GROUP_LAYOUT'] = false,
-   ['GROUP_HEADERS'] = true,
-   ['CLASS_COLORS'] = true,
    ['UPPERCASE_NAMES'] = false,
-   ['MANA_ONLY'] = false,
 }
 
 local function ShowColorPicker(r, g, b, a, callback)
@@ -46,14 +49,18 @@ local function ColorPickerCallback(restore)
 end
 
 function CRAP:InitOptions()
-   CRAP_Config = CRAP_Config or options
+   if CRAP_Config and not CRAP_Config['CLICKCAST_DATA'] then
+      CRAP_Config = options
+   else
+      CRAP_Config = CRAP_Config or options
+   end
 end
 
 SLASH_CRAP1 = '/crap'
 SlashCmdList['CRAP'] = function(msg)
    local args = {}
 	local i = 1
-	for arg in string.gfind(string.lower(msg), '%S+') do
+	for arg in string.gfind(msg, '%S+') do
 		args[i] = arg
 		i = i + 1
 	end
@@ -70,7 +77,7 @@ SlashCmdList['CRAP'] = function(msg)
 
          CRAP:Update(true)
          
-         local commands = 'border-color'
+         local commands = 'border-color, clickcast'
          for k, v in pairs(options) do
             if type(v) == 'boolean' then
                commands = commands .. ', ' .. string.gsub(strlower(k), '_', '-')
@@ -86,6 +93,23 @@ SlashCmdList['CRAP'] = function(msg)
       ShowColorPicker(CRAP_Config['BORDER_COLOR']['R'], CRAP_Config['BORDER_COLOR']['G'], CRAP_Config['BORDER_COLOR']['B'], CRAP_Config['BORDER_COLOR']['A'], ColorPickerCallback)
 
       DEFAULT_CHAT_FRAME:AddMessage('Select a new color and click \'Okay\' to save. To restore previous color, click \'Cancel\'.')
+   elseif args[1] == 'clickcast' then
+      if CRAP.clickcast == nil then
+         for i = 1, 12 do
+            _G['SpellButton' .. i]:RegisterForClicks('LeftButtonUp', 'RightButtonUp', 'MiddleButtonUp', 'Button4Up', 'Button5Up')
+         end
+
+         CRAP.clickcast = true
+      elseif not CRAP.clickcast then
+         CRAP.clickcast = true
+      else
+         CRAP.clickcast = false
+
+         DEFAULT_CHAT_FRAME:AddMessage('Click-binding disabled.')
+         return
+      end
+
+      DEFAULT_CHAT_FRAME:AddMessage('Click-binding enabled. Open the spellbook and click on spells you want to bind (modifiers are supported). To unbind a button, click on the \'Attack\' spell.\n\nAlt-left click can be used to select a member frame.')
    else
       for k in pairs(options) do
          if string.gsub(strupper(args[1]), '-', '_') == k then

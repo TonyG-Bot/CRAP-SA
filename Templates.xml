@@ -16,9 +16,12 @@
             <OnLeave>
                 GroupMemberFrameAuraButton_OnLeave()
             </OnLeave>
+            <OnLoad>
+                GroupMemberFrameAuraButton_OnLoad()
+            </OnLoad>
         </Scripts>
     </Button>
-    <Frame name="GroupMemberFrameTemplate" virtual="true">
+    <Button name="GroupMemberFrameTemplate" virtual="true">
         <Frames>
             <StatusBar name="$parentHealthBar" frameLevel="1">
                 <BarTexture file="Interface\AddOns\CRAP\assets\RaidFrame-Fill" />
@@ -121,12 +124,12 @@
             <OnLoad>
                 GroupMemberFrame_OnLoad()
             </OnLoad>
-            <OnMouseDown>
-                GroupMemberFrame_OnMouseDown()
-            </OnMouseDown>
+            <OnClick>
+                GroupMemberFrame_OnClick()
+            </OnClick>
             <OnUpdate>
                 GroupMemberFrame_OnUpdate()
             </OnUpdate>
         </Scripts>
-    </Frame>
+    </Button>
 </Ui>
