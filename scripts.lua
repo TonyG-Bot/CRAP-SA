@@ -1,13 +1,5 @@
 local _G = getfenv(0)
 
-local function CastSpellMouseover(spell, unit)
-   local cvar = GetCVar('AutoSelfCast')
-	SetCVar('AutoSelfCast', '0')
-	CastSpellByName(spell)
-   SpellTargetUnit(unit)
-	SetCVar('AutoSelfCast', cvar)
-end
-
 -- Group frame scripts
 function GroupFrame_OnDragStart()
 	if IsShiftKeyDown() then
@@ -93,36 +85,24 @@ function GroupMemberFrame_OnLoad()
    this:RegisterEvent('UNIT_DISPLAYPOWER')
    this:RegisterEvent('UNIT_HEALTH')
 
-   this:RegisterForClicks('LeftButtonUp', 'RightButtonUp', 'MiddleButtonUp', 'Button4Up', 'Button5Up')
+   this:RegisterForClicks('LeftButtonUp', 'RightButtonUp')
 end
 
-function GroupMemberFrame_OnClick(unit)
-   local target = unit or this.unit
-   local button = (IsControlKeyDown() and 'CTRL-' or '') .. (IsShiftKeyDown() and 'SHIFT-' or '') .. arg1
-   local action = CRAP_Config['CLICKCAST_DATA'][button]
+function GroupMemberFrame_OnClick(frame)
+   frame = frame or this
 
-   if button == 'LeftButton' then
-      if (action and IsAltKeyDown()) or not action then
-         TargetUnit(this.unit)
+   if arg1 == 'LeftButton' then
+      TargetUnit(frame.unit)
 
-         local highlight = _G[this:GetName() .. 'Highlight']
-         highlight:Show()
+      local highlight = _G[frame:GetName() .. 'Highlight']
+      highlight:Show()
 
-         CRAP.target = highlight
-      else
-         CastSpellMouseover(action, target)
+      CRAP.target = highlight
+   elseif arg1 == 'RightButton' then
+      local id = this:GetID()
+      if GetNumPartyMembers() > 0 and id > 0 then
+         ToggleDropDownMenu(1, nil, _G['PartyMemberFrame' .. id .. 'DropDown'], this:GetName(), 100, 25)
       end
-   elseif button == 'RightButton' then
-      if (action and IsAltKeyDown()) or not action then
-         local id = this:GetID()
-         if GetNumPartyMembers() > 0 and id > 0 then
-            ToggleDropDownMenu(1, nil, _G['PartyMemberFrame' .. id .. 'DropDown'], this:GetName(), 100, 25)
-         end
-      else
-         CastSpellMouseover(action, target)
-      end
-   elseif action then
-      CastSpellMouseover(action, target)
    end
 end
 
@@ -150,7 +130,7 @@ end
 
 -- Member frame aura button scripts
 function GroupMemberFrameAuraButton_OnClick()
-   GroupMemberFrame_OnClick(this:GetParent().unit)
+   GroupMemberFrame_OnClick(this:GetParent())
 end
 
 function GroupMemberFrameAuraButton_OnEnter()
@@ -164,5 +144,5 @@ function GroupMemberFrameAuraButton_OnLeave()
 end
 
 function GroupMemberFrameAuraButton_OnLoad()
-   this:RegisterForClicks('LeftButtonUp', 'RightButtonUp', 'MiddleButtonUp', 'Button4Up', 'Button5Up')
+   this:RegisterForClicks('LeftButtonUp', 'RightButtonUp')
 end

@@ -4,11 +4,13 @@
 ## Notes: Compact raid and party frames.
 ## Version: GIT
 ## SavedVariablesPerCharacter: CRAP_Cache, CRAP_Config
+## OptionalDeps: Clique
 
 core.lua
 options.lua
-overrides.lua
 scripts.lua
+
+plugins\clique.lua
 
 libs\libtipscan.lua
 libs\libspell.lua
