@@ -107,7 +107,7 @@ function GroupMemberFrame_OnClick(unit)
 
          local highlight = _G[this:GetName() .. 'Highlight']
          highlight:Show()
-   
+
          CRAP.target = highlight
       else
          CastSpellMouseover(action, target)
@@ -130,7 +130,7 @@ function GroupMemberFrame_OnUpdate()
 	this.elapsed = this.elapsed or 0
 	if this.elapsed >= 0.1 then
 		this.elapsed = 0
-      
+
       if this.unit then
          local healthbar = _G[this:GetName() .. 'HealthBar']
          if CheckInteractDistance(this.unit, 4) or librange:UnitInSpellRange(this.unit) == 1 then
@@ -141,10 +141,10 @@ function GroupMemberFrame_OnUpdate()
             healthbar:SetAlpha(0.5)
          end
       end
-		
+
 		CRAP:UpdateMemberIncomingHeal(this)
 	end
-	
+
 	this.elapsed = this.elapsed + arg1
 end
 

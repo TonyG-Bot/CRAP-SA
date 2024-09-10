@@ -1,10 +1,10 @@
 local __SpellButton_OnClick = SpellButton_OnClick
-function SpellButton_OnClick(drag) 
+function SpellButton_OnClick(drag)
    if CRAP.clickcast then
       local button = (IsControlKeyDown() and 'CTRL-' or '') .. (IsShiftKeyDown() and 'SHIFT-' or '') .. arg1
       local name, rank = GetSpellName(SpellBook_GetSpellID(this:GetID()), 'BOOKTYPE_SPELL')
       local spell = IsAltKeyDown() and name or (name .. '(' .. rank .. ')')
-      
+
       if name == 'Attack' then
          CRAP_Config['CLICKCAST_DATA'][button] = nil
 

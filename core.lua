@@ -10,7 +10,7 @@ CRAP:RegisterEvent('RAID_ROSTER_UPDATE')
 local function HandleEvent()
 	if event == 'PLAYER_ENTERING_WORLD' then
 		CRAP:InitOptions()
-		
+
 		for i = 1, MAX_PARTY_MEMBERS do
 			local frame = getglobal('PartyMemberFrame' .. i)
 			if frame then
@@ -180,7 +180,7 @@ end
 function CRAP:UpdateMemberAuras(frame)
    local indicator = _G[frame:GetName() .. 'DebuffIndicator']
    indicator:Hide()
-   
+
    for i = 1, 4 do
       local button = _G[frame:GetName() .. 'AuraButton' .. i]
       button:Hide()
@@ -223,7 +223,7 @@ function CRAP:UpdateMemberHealth(frame)
    local member = frame.unit
    local healthbar = _G[frame:GetName() .. 'HealthBar']
    local status = _G[frame:GetName() .. 'StatusText']
-   
+
    healthbar:SetMinMaxValues(0, UnitHealthMax(member))
    healthbar:SetValue(UnitHealth(member))
 

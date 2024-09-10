@@ -76,7 +76,7 @@ SlashCmdList['CRAP'] = function(msg)
          GroupFrame:EnableMouse(true)
 
          CRAP:Update(true)
-         
+
          local commands = 'border-color, clickcast'
          for k, v in pairs(options) do
             if type(v) == 'boolean' then
