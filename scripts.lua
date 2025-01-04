@@ -85,7 +85,7 @@ function GroupMemberFrame_OnLoad()
    this:RegisterEvent('UNIT_DISPLAYPOWER')
    this:RegisterEvent('UNIT_HEALTH')
 
-   this:RegisterForClicks('LeftButtonUp', 'RightButtonUp')
+   this:RegisterForClicks('LeftButtonUp', 'RightButtonUp', 'MiddleButtonUp', 'Button4Up', 'Button5Up')
 end
 
 function GroupMemberFrame_OnClick(frame)
@@ -130,7 +130,8 @@ end
 
 -- Member frame aura button scripts
 function GroupMemberFrameAuraButton_OnClick()
-   GroupMemberFrame_OnClick(this:GetParent())
+   local script = this:GetParent():GetScript('OnClick')
+   script()
 end
 
 function GroupMemberFrameAuraButton_OnEnter()
@@ -144,5 +145,5 @@ function GroupMemberFrameAuraButton_OnLeave()
 end
 
 function GroupMemberFrameAuraButton_OnLoad()
-   this:RegisterForClicks('LeftButtonUp', 'RightButtonUp')
+   this:RegisterForClicks('LeftButtonUp', 'RightButtonUp', 'MiddleButtonUp', 'Button4Up', 'Button5Up')
 end
