@@ -1,6 +1,57 @@
 local _G = getfenv(0)
 
-local classes = { 'Druid', 'Hunter', 'Mage', 'Paladin', 'Priest', 'Rogue', 'Shaman', 'Warlock', 'Warrior' }
+local function initializeLocalization()
+        local locale = GetLocale() or "enUS" -- Obtener el idioma del cliente de WoW
+        local localizedClasses = {}
+
+		if locale == "esES" then
+			-- Nombres localizados para español
+			localizedClasses = {
+				['Druid'] = 'Druida',
+				['Hunter'] = 'Cazador',
+				['Mage'] = 'Mago',
+				['Paladin'] = 'Paladín',
+				['Priest'] = 'Sacerdote',
+				['Rogue'] = 'Pícaro',
+				['Shaman'] = 'Chamán',
+				['Warlock'] = 'Brujo',
+				['Warrior'] = 'Guerrero',
+				['Offline'] = 'Desconectado',
+				['Dead'] = 'Muerto',
+			}
+		else
+			-- Inglés como idioma predeterminado
+			localizedClasses = {
+				['Druid'] = 'Druid',
+				['Hunter'] = 'Hunter',
+				['Mage'] = 'Mage',
+				['Paladin'] = 'Paladin',
+				['Priest'] = 'Priest',
+				['Rogue'] = 'Rogue',
+				['Shaman'] = 'Shaman',
+				['Warlock'] = 'Warlock',
+				['Warrior'] = 'Warrior',
+				['Offline'] = 'Offline',
+				['Dead'] = 'Dead',
+			}
+		end
+
+		return localizedClasses
+	end
+
+	local localizedClasses = initializeLocalization()
+
+local classes = {
+	localizedClasses['Druid'],
+	localizedClasses['Hunter'],
+	localizedClasses['Mage'],
+	localizedClasses['Paladin'],
+	localizedClasses['Priest'],
+	localizedClasses['Rogue'],
+	localizedClasses['Shaman'],
+	localizedClasses['Warlock'],
+	localizedClasses['Warrior'],
+	}
 
 CRAP = CreateFrame('Frame', nil, UIParent)
 CRAP:RegisterEvent('PLAYER_ENTERING_WORLD')
@@ -229,7 +280,7 @@ function CRAP:UpdateMemberHealth(frame)
 
    CRAP:UpdateMemberIncomingHeal(frame)
 
-   status:SetText(not UnitIsConnected(member) and 'Offline' or UnitIsDeadOrGhost(member) and 'Dead')
+   status:SetText(not UnitIsConnected(member) and localizedClasses['Offline'] or UnitIsDeadOrGhost(member) and localizedClasses['Dead'])
 end
 
 function CRAP:UpdateMemberIncomingHeal(frame)
