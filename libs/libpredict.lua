@@ -11,12 +11,21 @@ local _G = getfenv(0)
 local senttarget
 local heals, ress, events, hooks = {}, {}, {}, {}
 
+local locale = GetLocale() or "enUS"
+
 local resurrections = {
   ["Resurrection"] = true,
   ["Rebirth"] = true,
   ["Redemption"] = true,
   ["Ancestral Spirit"] = true,
 }
+
+if locale == "esES" then
+        resurrections["Resurrection"] = "Resurrección"
+        resurrections["Rebirth"] = "Renacimiento"
+        resurrections["Redemption"] = "Redención"
+        resurrections["Ancestral Spirit"] = "Espíritu Ancestral"
+end
 
 local gfind = string.gmatch or string.gfind
 
