@@ -168,10 +168,12 @@ function CRAP:UpdateMember(frame, mock)
          aura:SetHeight(size)
       end
 
-      local name = mock and classes[math.random(1, 9)] or UnitName(frame.unit)
-      local nametext = _G[frame:GetName() .. 'NameText']
-      nametext:SetText(CRAP_Config['UPPERCASE_NAMES'] and strupper(name) or name)
-      nametext:SetWidth(width - 18)
+	  local name = mock and classes[math.random(1, 9)] or UnitName(frame.unit)
+	  local classEnglish, classToken = UnitClass(frame.unit)
+	  local nombreClase = localizedClasses[classEnglish] or classEnglish
+	  local nametext = _G[frame:GetName() .. 'NameText']
+	  nametext:SetText(CRAP_Config['UPPERCASE_NAMES'] and strupper(nombreClase) or nombreClase)
+	  nametext:SetWidth(width - 18)
 
       local _, ec = UnitClass(frame.unit)
       local class = mock and strupper(name) or ec
