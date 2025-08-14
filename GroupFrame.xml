@@ -1,5 +1,5 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
-    <Script file="group.lua" />
+    <!--Script file="group.lua" /-->
     <Button name="GroupFrame" parent="UIParent" frameLevel="3" frameStrata="LOW" movable="true" resizable="true" clampedToScreen="true" hidden="true">
         <Backdrop edgeFile="Interface\Tooltips\UI-Tooltip-Border">
             <EdgeSize val="16" />
