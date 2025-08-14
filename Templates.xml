@@ -1,5 +1,5 @@
 <Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.blizzard.com/wow/ui/..\FrameXML\UI.xsd">
-    <Script file="member.lua" />
+    <!--Script file="member.lua" /-->
     <Button name="GroupMemberFrameAuraButtonTemplate" frameLevel="5" hidden="true" virtual="true">
         <Layers>
             <Layer level="OVERLAY">
@@ -30,7 +30,8 @@
                     <BackgroundInsets left="-1" right="-1" top="-1" bottom="-1" />
                 </Backdrop>
                 <Frames>
-                    <StatusBar name="$parentHealBar" frameLevel="0" hidden="true">
+                    <!--StatusBar name="$parentHealBar" frameLevel="0" hidden="true"-->
+                    <StatusBar name="$parentHealBar" hidden="true">
                         <BarTexture file="Interface\AddOns\CRAP\assets\RaidFrame-Fill" />
                         <BarColor r="0.0" g="0.7" b="0.7" />
                     </StatusBar>
