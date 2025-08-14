@@ -41,17 +41,7 @@ local function initializeLocalization()
 
 	local localizedClasses = initializeLocalization()
 
-local classes = {
-	localizedClasses['Druid'],
-	localizedClasses['Hunter'],
-	localizedClasses['Mage'],
-	localizedClasses['Paladin'],
-	localizedClasses['Priest'],
-	localizedClasses['Rogue'],
-	localizedClasses['Shaman'],
-	localizedClasses['Warlock'],
-	localizedClasses['Warrior'],
-	}
+local classes = { 'Druid', 'Hunter', 'Mage', 'Paladin', 'Priest', 'Rogue', 'Shaman', 'Warlock', 'Warrior' }
 
 CRAP = CreateFrame('Frame', nil, UIParent)
 CRAP:RegisterEvent('PLAYER_ENTERING_WORLD')
