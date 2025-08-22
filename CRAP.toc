@@ -1,7 +1,7 @@
 ## Interface: 11200
 ## Title: CRAP |cff008000Turtle|r SA
 ## Author: luskanek, TonyG-Bot
-## Notes: Versión modificada de CRAP para Turtle WoW SA.
+## Notes: Versión modificada de CRAP para Turtle WoW SA (Español-esES).
 ## Notes-enUS: Compact raid and party frames.
 ## Version: GIT
 ## SavedVariablesPerCharacter: CRAP_Cache, CRAP_Config
