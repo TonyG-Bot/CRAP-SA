@@ -22,7 +22,7 @@ local resurrections = {
 
 if locale == "esES" then
         resurrections["Resurrection"] = "Resurrección"
-        resurrections["Rebirth"] = "Renacimiento"
+        resurrections["Rebirth"] = "Renacer"
         resurrections["Redemption"] = "Redención"
         resurrections["Ancestral Spirit"] = "Espíritu Ancestral"
 end
